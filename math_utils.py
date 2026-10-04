@@ -20,6 +20,14 @@ def power(base: float, exp: int) -> float:
     return result
 
 
+def square_root(n: float) -> float:
+    """Calculate square root of a non-negative number."""
+    if n < 0:
+        raise ValueError("Cannot calculate square root of negative number")
+    return n ** 0.5
+
+
 if __name__ == "__main__":
     print(factorial(5))
     print(power(2, 3))
+    print(square_root(9))
