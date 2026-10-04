@@ -10,5 +10,16 @@ def factorial(n: int) -> int:
     return result
 
 
+def power(base: float, exp: int) -> float:
+    """Calculate base raised to exp using iterative multiplication."""
+    if exp < 0:
+        return 1 / power(base, -exp)
+    result = 1
+    for _ in range(exp):
+        result *= base
+    return result
+
+
 if __name__ == "__main__":
     print(factorial(5))
+    print(power(2, 3))
